@@ -1,0 +1,20 @@
+<?jelly escape-by-default='true'?>
+<j:jelly
+    xmlns:j="jelly:core"
+    xmlns:st="jelly:stapler"
+    xmlns:d="jelly:define"
+    xmlns:l="/lib/layout"
+    xmlns:t="/lib/hudson"
+    xmlns:f="/lib/form">
+  <l:layout norefresh="true" xmlns:local="local">
+    <st:include it="${it.job}" page="sidepanel.jelly" />
+    <l:main-panel>
+      <j:if test="${it.hasPermission(it.job)}">
+        ${%Target Master: Production}
+        <form action="submit" method="post" name="promoteToProduction">
+          <f:submit value="${%Submit}"/>
+        </form>
+      </j:if>
+    </l:main-panel>
+  </l:layout>
+</j:jelly>

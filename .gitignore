@@ -1,0 +1,19 @@
+# Created by .ignore support plugin (hsz.mobi)
+### Maven template
+target/
+work/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+maven-repository/
+lib/
+Installation.md
+Jenkinsfile
+
+.idea/
+*.iml
